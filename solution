@@ -1,4 +1,4 @@
-in Tampermonkey
+/*in Tampermonkey*/
 
 /* 이 방법은 하나의 사이트에만 적용됨 */
 (function() {
