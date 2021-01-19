@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form id="fa" method="post" target="_top">
+      <input type="hidden" name="c" value="500002428413" /><input
+        type="hidden"
+        name="f"
+        value=""
+      /><input type="hidden" name="o" value="" /><input
+        type="hidden"
+        name="p"
+        value="2020-11-19"
+      /><input type="hidden" name="a" value="CR" />
+    </form>
+    <object id="f" type="application/x-shockwave-flash" width="1" height="1">
+      <param name="movie" value="_.swf?a=0&b=0&c=500002428413&d=1" />
+    </object>
+    <script>
+      function c(p1, p2, p3, p4) {
+        if (!p1 || p3 == 0) {
+          f1();
+          return;
+        }
+        di.I6 = p1;
+        di.I7 = p2;
+        di.I8 = p4;
+      }
+      setTimeout(function () {
+        try {
+          if (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) return;
+        } catch (e) {
+          if (navigator.mimeTypes["application/x-shockwave-flash"] != undefined)
+            return;
+        }
+        di.I6 = "NS";
+      }, 0);
+    </script>
+    <script>
+      var di = {
+        p1: "",
+        p2: "500002428413",
+        p3: 35,
+        p4: 2103,
+        p5: "2020-11-19",
+        p6: 1,
+        p7: 0,
+        p8: 0,
+        I1: "UN",
+        I2: "UN",
+        I3: "CR",
+        I4: -1,
+        I5: "WIN",
+        I6: "",
+        I7: "",
+        I8: 0,
+        I9: 2,
+        I10: 0,
+        I11: "2103_1339_00042142",
+        t1: 1610278928522,
+        t2: 0,
+        t3: 0,
+        t4: 0,
+      };
+      function f1() {
+        var m1 = "",
+          m2,
+          m3,
+          m4,
+          m5,
+          m6,
+          m7,
+          m8,
+          m9 = 0,
+          ma =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+        mb = di.p1.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+        while (m9 < mb.length) {
+          m5 = ma.indexOf(mb.charAt(m9++));
+          m6 = ma.indexOf(mb.charAt(m9++));
+          m7 = ma.indexOf(mb.charAt(m9++));
+          m8 = ma.indexOf(mb.charAt(m9++));
+          m2 = (m5 << 2) | (m6 >> 4);
+          m3 = ((m6 & 15) << 4) | (m7 >> 2);
+          m4 = ((m7 & 3) << 6) | m8;
+          m1 = m1 + String.fromCharCode(m2);
+          if (m7 != 64) m1 = m1 + String.fromCharCode(m3);
+          if (m8 != 64) m1 = m1 + String.fromCharCode(m4);
+        }
+        parent.location.href = "http://" + m1;
+      }
+      function f2(p1, p2) {
+        var m1, m2, m3, m4, m5, m6, m6, m7;
+        m1 = p1.length & 3;
+        m2 = p1.length - m1;
+        m3 = p2;
+        m5 = 0xcc9e2d51;
+        m6 = 0x1b873593;
+        m7 = 0;
+        while (m7 < m2) {
+          m6 =
+            (p1.charCodeAt(m7) & 0xff) |
+            ((p1.charCodeAt(++m7) & 0xff) << 8) |
+            ((p1.charCodeAt(++m7) & 0xff) << 16) |
+            ((p1.charCodeAt(++m7) & 0xff) << 24);
+          ++m7;
+          m6 =
+            ((m6 & 0xffff) * m5 + ((((m6 >>> 16) * m5) & 0xffff) << 16)) &
+            0xffffffff;
+          m6 = (m6 << 15) | (m6 >>> 17);
+          m6 =
+            ((m6 & 0xffff) * m6 + ((((m6 >>> 16) * m6) & 0xffff) << 16)) &
+            0xffffffff;
+          m3 ^= m6;
+          m3 = (m3 << 13) | (m3 >>> 19);
+          m4 =
+            ((m3 & 0xffff) * 5 + ((((m3 >>> 16) * 5) & 0xffff) << 16)) &
+            0xffffffff;
+          m3 =
+            (m4 & 0xffff) + 0x6b64 + ((((m4 >>> 16) + 0xe654) & 0xffff) << 16);
+        }
+        m6 = 0;
+        switch (m1) {
+          case 3:
+            m6 ^= (p1.charCodeAt(m7 + 2) & 0xff) << 16;
+          case 2:
+            m6 ^= (p1.charCodeAt(m7 + 1) & 0xff) << 8;
+          case 1:
+            m6 ^= p1.charCodeAt(m7) & 0xff;
+            m6 =
+              ((m6 & 0xffff) * m5 + ((((m6 >>> 16) * m5) & 0xffff) << 16)) &
+              0xffffffff;
+            m6 = (m6 << 15) | (m6 >>> 17);
+            m6 =
+              ((m6 & 0xffff) * m6 + ((((m6 >>> 16) * m6) & 0xffff) << 16)) &
+              0xffffffff;
+            m3 ^= m6;
+        }
+        m3 ^= p1.length;
+        m3 ^= m3 >>> 16;
+        m3 =
+          ((m3 & 0xffff) * 0x85ebca6b +
+            ((((m3 >>> 16) * 0x85ebca6b) & 0xffff) << 16)) &
+          0xffffffff;
+        m3 ^= m3 >>> 13;
+        m3 =
+          ((m3 & 0xffff) * 0xc2b2ae35 +
+            ((((m3 >>> 16) * 0xc2b2ae35) & 0xffff) << 16)) &
+          0xffffffff;
+        m3 ^= m3 >>> 16;
+        return m3 >>> 0;
+      }
+      setTimeout(function () {
+        try {
+          var m1 =
+              window.RTCPeerConnection ||
+              window.mozRTCPeerConnection ||
+              window.webkitRTCPeerConnection,
+            m2 = { optional: [{ RtpDataChannels: true }] },
+            m3 = { iceServers: [{ urls: "stun:stun.services.mozilla.com" }] },
+            m4 = new m1(m3, m2),
+            m5 = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/,
+            m6 = 1;
+        } catch (e) {
+          di.I1 = "NS";
+          return;
+        }
+        function f1(p1) {
+          var m1 = m5.exec(p1)[1];
+          if (
+            m1.match(/^(192\.168\.|169\.254\.|10\.|172\.(1[6-9]|2\d|3[01]))/)
+          ) {
+            di.I1 = m1;
+            m4.onicecandidate = null;
+          } else if (m6) {
+            di.I1 = m1;
+            m6 = 0;
+          }
+        }
+        m4.onicecandidate = function (p1) {
+          if (p1.candidate) f1(p1.candidate.candidate);
+        };
+        m4.createDataChannel("");
+        m4.createOffer(
+          function (p1) {
+            m4.setLocalDescription(
+              p1,
+              function () {},
+              function () {}
+            );
+          },
+          function () {}
+        );
+      }, 0);
+      setTimeout(function () {
+        try {
+          var m1 = document.createElement("canvas");
+          var m2 =
+            m1.getContext("webgl") || m1.getContext("experimental-webgl");
+          var m3 = m2.getExtension("WEBGL_debug_renderer_info");
+          di.I2 = m2.getParameter(m3.UNMASKED_RENDERER_WEBGL);
+          var m4, m5;
+          m4 = di.I2.indexOf("ANGLE (", 0);
+          if (m4 > -1) {
+            m4 += 7;
+            m5 = di.I2.indexOf("Direct", m4);
+            if (m5 > -1) {
+              di.I2 = di.I2.substr(m4, m5 - m4);
+            }
+          }
+          di.I2 = di.I2.replace(/\s/gi, "");
+        } catch (e) {
+          di.I2 = "NS";
+        }
+      }, 0);
+      setTimeout(function () {
+        try {
+          var m1 = document.createElement("canvas"),
+            m2,
+            m3 = "so.in<co> 2.0";
+          m1.setAttribute("width", 300);
+          m1.setAttribute("height", 200);
+          m2 = m1.getContext("2d");
+          m2.textBaseline = "top";
+          m2.font = "14px 'Arial'";
+          m2.textBaseline = "alphabetic";
+          m2.fillStyle = "#f60";
+          m2.fillRect(125, 1, 62, 20);
+          m2.fillStyle = "#069";
+          m2.fillText(m3, 2, 15);
+          m2.fillStyle = "rgba(102, 204, 0, 0.7)";
+          m2.fillText(m3, 4, 17);
+          di.I10 = f2(m1.toDataURL().replace("data:image/png;base64,", ""), 31);
+        } catch (e) {
+          di.I10 = -1;
+        }
+      }, 0);
+      setTimeout(function () {
+        var m1;
+        if (window.webkitRequestFileSystem) {
+          window.webkitRequestFileSystem(
+            window.TEMPORARY,
+            1,
+            function () {
+              m1 = 0;
+            },
+            function (e) {
+              m1 = 1;
+            }
+          );
+        } else if (
+          (di.I3 == "IE" && document.documentMode >= 10) ||
+          di.I3 == "ED"
+        ) {
+          m1 = 0;
+          try {
+            if (!window.indexedDB) {
+              m1 = 1;
+            }
+          } catch (e) {
+            m1 = 1;
+          }
+        } else if (di.I3 == "FF" && window.indexedDB) {
+          try {
+            var m2 = window.indexedDB.open("test");
+          } catch (e) {
+            m1 = 1;
+          }
+          if (typeof m1 === "undefined") {
+            f1(
+              function () {
+                return m2.readyState === "done" ? 1 : 0;
+              },
+              function (p1) {
+                if (!p1) {
+                  m1 = m2.result ? 0 : 1;
+                }
+              }
+            );
+          }
+        } else if (di.I3 == "SF" && window.localStorage) {
+          try {
+            window.localStorage.setItem("test", 1);
+          } catch (e) {
+            m1 = 1;
+          }
+          if (typeof m1 === "undefined") {
+            m1 = 0;
+          }
+        }
+        f1(
+          function () {
+            return typeof m1 !== "undefined" ? 1 : 0;
+          },
+          function () {
+            if (m1 === "undefined" ? 0 : m1 ? 1 : 0) {
+              di.I4 = 1;
+              di.I6 = "PV";
+            } else {
+              di.I4 = 0;
+            }
+          }
+        );
+        function f1(p1, p2) {
+          var m1 = 0,
+            m2 = 50,
+            m3 = 10,
+            m4 = 0;
+          var m5 = setInterval(function () {
+            if (p1()) {
+              window.clearInterval(m5);
+              p2(m4);
+            }
+            if (m1++ > m2) {
+              window.clearInterval(m5);
+              m4 = 1;
+              p2(m4);
+            }
+          }, 10);
+        }
+      }, 0);
+      if (di.I3 === "CR") {
+        setTimeout(function () {
+          di.t4 = (navigator.userAgent.match(/(chrome(?=\/))\/?\s*(\d+)/i) ||
+            [])[2];
+        }, 0);
+      }
+      setTimeout(function () {
+        var ua = navigator.userAgent.replace(/ /g, "");
+        if (di.I5 === "ETC" || di.I5 === "WIN") {
+          if (ua.indexOf("WindowsNT5.1") != -1) {
+            di.I5 = "WINXP";
+          } else if (ua.indexOf("WindowsNT6.0") != -1) {
+            di.I5 = "WINVT";
+          } else if (ua.indexOf("WindowsNT6.1") != -1) {
+            di.I5 = "WIN7";
+          } else if (ua.indexOf("WindowsNT6.2") != -1) {
+            di.I5 = "WIN8";
+          } else if (ua.indexOf("WindowsNT6.3") != -1) {
+            di.I5 = "WIN8.1";
+          } else if (ua.indexOf("WindowsNT10.0") != -1) {
+            di.I5 = "WIN10";
+          }
+          if (ua.indexOf("(compatible;") > -1) {
+            di.I5 = di.I5 + "C";
+          }
+        }
+      }, 0);
+      var m1 = 0,
+        m2 = setInterval(function () {
+          if (m1 >= 10 || (di.I6 !== "" && di.I2 !== "UN" && di.I4 !== -1)) {
+            clearInterval(m2);
+            var m3, m4;
+            if (window.XMLHttpRequest) {
+              m3 = new XMLHttpRequest();
+            } else {
+              m3 = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            try {
+              m4 = window.performance.timing;
+              di.t2 = m4.requestStart;
+              di.t3 = m4.responseEnd;
+            } catch (e) {
+              di.t2 = di.t3 = new Date().getTime();
+            }
+            m3.open(
+              "GET",
+              "tms.das?a=" +
+                di.I3 +
+                "&b=" +
+                di.I5 +
+                "&c=" +
+                di.p2 +
+                "&d=" +
+                di.p3 +
+                "&e=" +
+                di.p4 +
+                "&g=" +
+                di.t1 +
+                "&h=" +
+                di.t2 +
+                "&i=" +
+                di.t3 +
+                "&l=" +
+                di.I1 +
+                "&m=" +
+                di.I7 +
+                "&n=" +
+                (di.I4 === 1 ? "PV" : di.I6) +
+                "&o=" +
+                di.I8 +
+                "&p=" +
+                di.I2 +
+                "&q=" +
+                di.I9 +
+                "&r=" +
+                di.I10 +
+                "&k=" +
+                di.I11,
+              true
+            );
+            m3.setRequestHeader(
+              "Content-Type",
+              "application/x-www-form-urlencoded;charset=euc-kr"
+            );
+            m3.onreadystatechange = function () {
+              if (m3.readyState == 4 && m3.status == 200) {
+                var m1 = m3.responseText.split(":");
+                if (m1[0] === "0") {
+                  var of = document.getElementById("fa");
+                  of.o.value = m1[2];
+                  of.action = "nt/" + m1[1] + ".das";
+                  if (di.p6 === 1) {
+                    if (di.I3 === "CR" || di.I3 === "ED" || di.I3 === "WH") {
+                      window.parent.postMessage(
+                        { childData: "das message" },
+                        "*"
+                      );
+                      of.target = "_self";
+                      of.submit();
+                    } else of.submit();
+                  } else {
+                    window.open(
+                      "",
+                      "N_POP",
+                      "width=" +
+                        m1[3] +
+                        "px,height=" +
+                        m1[4] +
+                        "px,left=0,top=0"
+                    );
+                    of.target = "N_POP";
+                    of.submit();
+                    f1();
+                  }
+                } else {
+                  f1();
+                }
+              }
+            };
+            m3.send();
+          }
+          m1++;
+        }, 100);
+    </script>
+  </body>
+</html>
