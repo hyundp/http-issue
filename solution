@@ -26,3 +26,5 @@ function parseQuery(queryString) {
         location.href = 'http://' + atob(parseQuery(url.search).f)
     }
 })();
+
+kimtruth.github.io 참조.
