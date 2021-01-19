@@ -1,0 +1,28 @@
+in Tampermonkey
+
+/* 이 방법은 하나의 사이트에만 적용됨 */
+(function() {
+
+if(document.querySelector("iframe#f").src.includes('210.117.121.212')) {
+
+location.href = "원래 주소"}
+
+})();
+
+
+*/ 이 방법은 모든 사이트에 적용할 수 있음 */
+function parseQuery(queryString) {
+    var query = {};
+    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+    for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i].split('=');
+        query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+    }
+    return query;
+}
+(function() {
+    if(document.querySelector('iframe#f').src.includes('210.117.121.212')) {
+        var url = new URL(document.querySelector('iframe#f').src)
+        location.href = 'http://' + atob(parseQuery(url.search).f)
+    }
+})();
